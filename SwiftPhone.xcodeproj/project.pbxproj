@@ -14,29 +14,8 @@
 		1F8154F91A7946DF001ABEA9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8154F71A7946DF001ABEA9 /* LaunchScreen.xib */; };
 		1F8155051A7946DF001ABEA9 /* SwiftPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8155041A7946DF001ABEA9 /* SwiftPhoneTests.swift */; };
 		1FAD94931A7BD89200BD6E57 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD94921A7BD89200BD6E57 /* Phone.swift */; };
-		1FAD94981A7BD98900BD6E57 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAD94951A7BD98900BD6E57 /* libssl.a */; };
-		1FAD94991A7BD98900BD6E57 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAD94961A7BD98900BD6E57 /* libcrypto.a */; };
-		1FAD949A1A7BD98900BD6E57 /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAD94971A7BD98900BD6E57 /* libTwilioClient.a */; };
-		1FAD94A31A7BDA0500BD6E57 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAD94A21A7BDA0500BD6E57 /* SystemConfiguration.framework */; };
-		1FAD94A51A7BDA1000BD6E57 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAD94A41A7BDA1000BD6E57 /* AudioToolbox.framework */; };
-		1FAD94A71A7BDA1D00BD6E57 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAD94A61A7BDA1D00BD6E57 /* CFNetwork.framework */; };
-		1FAD94A91A7BDA2700BD6E57 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAD94A81A7BDA2700BD6E57 /* AVFoundation.framework */; };
-		1FAD94BA1A7BDC2100BD6E57 /* disconnect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94AB1A7BDC2100BD6E57 /* disconnect.wav */; };
-		1FAD94BB1A7BDC2100BD6E57 /* dtmf_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94AC1A7BDC2100BD6E57 /* dtmf_0.wav */; };
-		1FAD94BC1A7BDC2100BD6E57 /* dtmf_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94AD1A7BDC2100BD6E57 /* dtmf_1.wav */; };
-		1FAD94BD1A7BDC2100BD6E57 /* dtmf_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94AE1A7BDC2100BD6E57 /* dtmf_2.wav */; };
-		1FAD94BE1A7BDC2100BD6E57 /* dtmf_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94AF1A7BDC2100BD6E57 /* dtmf_3.wav */; };
-		1FAD94BF1A7BDC2100BD6E57 /* dtmf_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94B01A7BDC2100BD6E57 /* dtmf_4.wav */; };
-		1FAD94C01A7BDC2100BD6E57 /* dtmf_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94B11A7BDC2100BD6E57 /* dtmf_5.wav */; };
-		1FAD94C11A7BDC2100BD6E57 /* dtmf_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94B21A7BDC2100BD6E57 /* dtmf_6.wav */; };
-		1FAD94C21A7BDC2100BD6E57 /* dtmf_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94B31A7BDC2100BD6E57 /* dtmf_7.wav */; };
-		1FAD94C31A7BDC2100BD6E57 /* dtmf_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94B41A7BDC2100BD6E57 /* dtmf_8.wav */; };
-		1FAD94C41A7BDC2100BD6E57 /* dtmf_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94B51A7BDC2100BD6E57 /* dtmf_9.wav */; };
-		1FAD94C51A7BDC2100BD6E57 /* dtmf_hash.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94B61A7BDC2100BD6E57 /* dtmf_hash.wav */; };
-		1FAD94C61A7BDC2100BD6E57 /* dtmf_star.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94B71A7BDC2100BD6E57 /* dtmf_star.wav */; };
-		1FAD94C71A7BDC2100BD6E57 /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94B81A7BDC2100BD6E57 /* incoming.wav */; };
-		1FAD94C81A7BDC2100BD6E57 /* outgoing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD94B91A7BDC2100BD6E57 /* outgoing.wav */; };
 		1FAD94CF1A7FE80000BD6E57 /* SwiftRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD94CE1A7FE80000BD6E57 /* SwiftRequest.swift */; };
+		C26F02FB9927F68964F1D6C8 /* libPods-SwiftPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EC17CA47F462C803F909FD /* libPods-SwiftPhone.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		198BF325594FF29DCFDE5A70 /* Pods-SwiftPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPhone/Pods-SwiftPhone.release.xcconfig"; sourceTree = "<group>"; };
 		1F8154E91A7946DF001ABEA9 /* SwiftPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8154ED1A7946DF001ABEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F8154EE1A7946DF001ABEA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,36 +41,10 @@
 		1F8155031A7946DF001ABEA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F8155041A7946DF001ABEA9 /* SwiftPhoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPhoneTests.swift; sourceTree = "<group>"; };
 		1FAD94921A7BD89200BD6E57 /* Phone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
-		1FAD94951A7BD98900BD6E57 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
-		1FAD94961A7BD98900BD6E57 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
-		1FAD94971A7BD98900BD6E57 /* libTwilioClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTwilioClient.a; sourceTree = "<group>"; };
-		1FAD949C1A7BD99A00BD6E57 /* TCConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCConnection.h; sourceTree = "<group>"; };
-		1FAD949D1A7BD99A00BD6E57 /* TCConnectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCConnectionDelegate.h; sourceTree = "<group>"; };
-		1FAD949E1A7BD99A00BD6E57 /* TCDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCDevice.h; sourceTree = "<group>"; };
-		1FAD949F1A7BD99A00BD6E57 /* TCDeviceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCDeviceDelegate.h; sourceTree = "<group>"; };
-		1FAD94A01A7BD99A00BD6E57 /* TCPresenceEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPresenceEvent.h; sourceTree = "<group>"; };
-		1FAD94A11A7BD99A00BD6E57 /* TwilioClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwilioClient.h; sourceTree = "<group>"; };
-		1FAD94A21A7BDA0500BD6E57 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		1FAD94A41A7BDA1000BD6E57 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		1FAD94A61A7BDA1D00BD6E57 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		1FAD94A81A7BDA2700BD6E57 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		1FAD94AB1A7BDC2100BD6E57 /* disconnect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = disconnect.wav; sourceTree = "<group>"; };
-		1FAD94AC1A7BDC2100BD6E57 /* dtmf_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_0.wav; sourceTree = "<group>"; };
-		1FAD94AD1A7BDC2100BD6E57 /* dtmf_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_1.wav; sourceTree = "<group>"; };
-		1FAD94AE1A7BDC2100BD6E57 /* dtmf_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_2.wav; sourceTree = "<group>"; };
-		1FAD94AF1A7BDC2100BD6E57 /* dtmf_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_3.wav; sourceTree = "<group>"; };
-		1FAD94B01A7BDC2100BD6E57 /* dtmf_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_4.wav; sourceTree = "<group>"; };
-		1FAD94B11A7BDC2100BD6E57 /* dtmf_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_5.wav; sourceTree = "<group>"; };
-		1FAD94B21A7BDC2100BD6E57 /* dtmf_6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_6.wav; sourceTree = "<group>"; };
-		1FAD94B31A7BDC2100BD6E57 /* dtmf_7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_7.wav; sourceTree = "<group>"; };
-		1FAD94B41A7BDC2100BD6E57 /* dtmf_8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_8.wav; sourceTree = "<group>"; };
-		1FAD94B51A7BDC2100BD6E57 /* dtmf_9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_9.wav; sourceTree = "<group>"; };
-		1FAD94B61A7BDC2100BD6E57 /* dtmf_hash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_hash.wav; sourceTree = "<group>"; };
-		1FAD94B71A7BDC2100BD6E57 /* dtmf_star.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_star.wav; sourceTree = "<group>"; };
-		1FAD94B81A7BDC2100BD6E57 /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incoming.wav; sourceTree = "<group>"; };
-		1FAD94B91A7BDC2100BD6E57 /* outgoing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = outgoing.wav; sourceTree = "<group>"; };
 		1FAD94CA1A7BDC6E00BD6E57 /* SwiftPhone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftPhone-Bridging-Header.h"; sourceTree = "<group>"; };
 		1FAD94CE1A7FE80000BD6E57 /* SwiftRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRequest.swift; sourceTree = "<group>"; };
+		84EC17CA47F462C803F909FD /* libPods-SwiftPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95E882B49C8E40E87FA4A9F0 /* Pods-SwiftPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftPhone/Pods-SwiftPhone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,13 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FAD94A91A7BDA2700BD6E57 /* AVFoundation.framework in Frameworks */,
-				1FAD94A71A7BDA1D00BD6E57 /* CFNetwork.framework in Frameworks */,
-				1FAD94A51A7BDA1000BD6E57 /* AudioToolbox.framework in Frameworks */,
-				1FAD94A31A7BDA0500BD6E57 /* SystemConfiguration.framework in Frameworks */,
-				1FAD94991A7BD98900BD6E57 /* libcrypto.a in Frameworks */,
-				1FAD949A1A7BD98900BD6E57 /* libTwilioClient.a in Frameworks */,
-				1FAD94981A7BD98900BD6E57 /* libssl.a in Frameworks */,
+				C26F02FB9927F68964F1D6C8 /* libPods-SwiftPhone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,11 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				1FAD94C91A7BDC2A00BD6E57 /* Frameworks */,
-				1FAD94AA1A7BDC2100BD6E57 /* Resources */,
-				1FAD94941A7BD96D00BD6E57 /* Libraries */,
 				1F8154EB1A7946DF001ABEA9 /* SwiftPhone */,
 				1F8155011A7946DF001ABEA9 /* SwiftPhoneTests */,
 				1F8154EA1A7946DF001ABEA9 /* Products */,
+				DB8D9B34202CB0C2334C35FA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,61 +127,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1FAD94941A7BD96D00BD6E57 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				1FAD949B1A7BD98E00BD6E57 /* Headers */,
-				1FAD94951A7BD98900BD6E57 /* libssl.a */,
-				1FAD94961A7BD98900BD6E57 /* libcrypto.a */,
-				1FAD94971A7BD98900BD6E57 /* libTwilioClient.a */,
-			);
-			name = Libraries;
-			sourceTree = "<group>";
-		};
-		1FAD949B1A7BD98E00BD6E57 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				1FAD949C1A7BD99A00BD6E57 /* TCConnection.h */,
-				1FAD949D1A7BD99A00BD6E57 /* TCConnectionDelegate.h */,
-				1FAD949E1A7BD99A00BD6E57 /* TCDevice.h */,
-				1FAD949F1A7BD99A00BD6E57 /* TCDeviceDelegate.h */,
-				1FAD94A01A7BD99A00BD6E57 /* TCPresenceEvent.h */,
-				1FAD94A11A7BD99A00BD6E57 /* TwilioClient.h */,
-			);
-			name = Headers;
-			sourceTree = "<group>";
-		};
-		1FAD94AA1A7BDC2100BD6E57 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1FAD94AB1A7BDC2100BD6E57 /* disconnect.wav */,
-				1FAD94AC1A7BDC2100BD6E57 /* dtmf_0.wav */,
-				1FAD94AD1A7BDC2100BD6E57 /* dtmf_1.wav */,
-				1FAD94AE1A7BDC2100BD6E57 /* dtmf_2.wav */,
-				1FAD94AF1A7BDC2100BD6E57 /* dtmf_3.wav */,
-				1FAD94B01A7BDC2100BD6E57 /* dtmf_4.wav */,
-				1FAD94B11A7BDC2100BD6E57 /* dtmf_5.wav */,
-				1FAD94B21A7BDC2100BD6E57 /* dtmf_6.wav */,
-				1FAD94B31A7BDC2100BD6E57 /* dtmf_7.wav */,
-				1FAD94B41A7BDC2100BD6E57 /* dtmf_8.wav */,
-				1FAD94B51A7BDC2100BD6E57 /* dtmf_9.wav */,
-				1FAD94B61A7BDC2100BD6E57 /* dtmf_hash.wav */,
-				1FAD94B71A7BDC2100BD6E57 /* dtmf_star.wav */,
-				1FAD94B81A7BDC2100BD6E57 /* incoming.wav */,
-				1FAD94B91A7BDC2100BD6E57 /* outgoing.wav */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		1FAD94C91A7BDC2A00BD6E57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1FAD94A81A7BDA2700BD6E57 /* AVFoundation.framework */,
-				1FAD94A61A7BDA1D00BD6E57 /* CFNetwork.framework */,
-				1FAD94A41A7BDA1000BD6E57 /* AudioToolbox.framework */,
-				1FAD94A21A7BDA0500BD6E57 /* SystemConfiguration.framework */,
+				84EC17CA47F462C803F909FD /* libPods-SwiftPhone.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB8D9B34202CB0C2334C35FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95E882B49C8E40E87FA4A9F0 /* Pods-SwiftPhone.debug.xcconfig */,
+				198BF325594FF29DCFDE5A70 /* Pods-SwiftPhone.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F8155081A7946DF001ABEA9 /* Build configuration list for PBXNativeTarget "SwiftPhone" */;
 			buildPhases = (
+				5947F18429065612456EAE91 /* Check Pods Manifest.lock */,
 				1F8154E51A7946DF001ABEA9 /* Sources */,
 				1F8154E61A7946DF001ABEA9 /* Frameworks */,
 				1F8154E71A7946DF001ABEA9 /* Resources */,
+				C555300BBF5B5778832C0A63 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,24 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FAD94BA1A7BDC2100BD6E57 /* disconnect.wav in Resources */,
-				1FAD94C11A7BDC2100BD6E57 /* dtmf_6.wav in Resources */,
 				1F8154F41A7946DF001ABEA9 /* Main.storyboard in Resources */,
-				1FAD94BB1A7BDC2100BD6E57 /* dtmf_0.wav in Resources */,
-				1FAD94C31A7BDC2100BD6E57 /* dtmf_8.wav in Resources */,
-				1FAD94BE1A7BDC2100BD6E57 /* dtmf_3.wav in Resources */,
 				1F8154F91A7946DF001ABEA9 /* LaunchScreen.xib in Resources */,
-				1FAD94C51A7BDC2100BD6E57 /* dtmf_hash.wav in Resources */,
-				1FAD94BF1A7BDC2100BD6E57 /* dtmf_4.wav in Resources */,
 				1F8154F61A7946DF001ABEA9 /* Images.xcassets in Resources */,
-				1FAD94C01A7BDC2100BD6E57 /* dtmf_5.wav in Resources */,
-				1FAD94BC1A7BDC2100BD6E57 /* dtmf_1.wav in Resources */,
-				1FAD94BD1A7BDC2100BD6E57 /* dtmf_2.wav in Resources */,
-				1FAD94C61A7BDC2100BD6E57 /* dtmf_star.wav in Resources */,
-				1FAD94C81A7BDC2100BD6E57 /* outgoing.wav in Resources */,
-				1FAD94C21A7BDC2100BD6E57 /* dtmf_7.wav in Resources */,
-				1FAD94C71A7BDC2100BD6E57 /* incoming.wav in Resources */,
-				1FAD94C41A7BDC2100BD6E57 /* dtmf_9.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +245,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5947F18429065612456EAE91 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C555300BBF5B5778832C0A63 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftPhone/Pods-SwiftPhone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F8154E51A7946DF001ABEA9 /* Sources */ = {
@@ -483,6 +410,7 @@
 		};
 		1F8155091A7946DF001ABEA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95E882B49C8E40E87FA4A9F0 /* Pods-SwiftPhone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftPhone/Info.plist;
@@ -491,7 +419,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPhone/SwiftPhone-Bridging-Header.h";
 			};
@@ -499,6 +427,7 @@
 		};
 		1F81550A1A7946DF001ABEA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 198BF325594FF29DCFDE5A70 /* Pods-SwiftPhone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftPhone/Info.plist;
@@ -507,7 +436,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftPhone/SwiftPhone-Bridging-Header.h";
 			};

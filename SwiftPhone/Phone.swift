@@ -12,9 +12,10 @@ let SPDefaultClientName:String = "jenny";
 let SPBaseCapabilityTokenUrl:String = "http://example.com/generateToken?%@"
 let SPTwiMLAppSid:String = "APxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
-public class Phone {
-    var device:TCDevice? = nil;
-    var connection:TCConnection? = nil;
+public class Phone : NSObject, TCDeviceDelegate {
+    var device:TCDevice!
+    var connection:TCConnection!
+    var pendingConnection:TCConnection!
     
     func login() {
     
@@ -61,31 +62,67 @@ public class Phone {
         return String(format:SPBaseCapabilityTokenUrl, querystring);
     }
 
-func connect(params dictParams:Dictionary<String,String> = Dictionary<String,String>()) {
-    
-    if (!self.capabilityTokenValid())
-    {
-        self.login();
-    }
-    
-    self.connection = self.device?.connect(dictParams, delegate: nil);
-}
-
-func capabilityTokenValid()->(Bool) {
-    var isValid:Bool = false;
-    
-    if (self.device != nil) {
-        var capabilities = self.device!.capabilities as NSDictionary;
+    func connectWithParams(params dictParams:Dictionary<String,String> = Dictionary<String,String>()) {
         
-        var expirationTimeObject:NSNumber = capabilities.objectForKey("expiration") as! NSNumber;
-        var expirationTimeValue:Int64 = expirationTimeObject.longLongValue;
-        var currentTimeValue:NSTimeInterval = NSDate().timeIntervalSince1970;
-        
-        if( (expirationTimeValue-Int64(currentTimeValue)) > 0 ) {
-            isValid = true;
+        if (!self.capabilityTokenValid())
+        {
+            self.login();
         }
+        
+        self.connection = self.device?.connect(dictParams, delegate: nil);
     }
     
-    return isValid;
-}
+    func acceptConnection() {
+        self.connection = self.pendingConnection
+        self.pendingConnection = nil
+        
+        self.connection?.accept()
+    }
+    
+    func rejectConnection() {
+        self.pendingConnection?.reject()
+        self.pendingConnection = nil
+    }
+    
+    func ignoreConnection() {
+        self.pendingConnection?.ignore()
+        self.pendingConnection = nil
+    }
+
+    func capabilityTokenValid()->(Bool) {
+        var isValid:Bool = false;
+    
+        if (self.device != nil) {
+            var capabilities = self.device!.capabilities as NSDictionary;
+        
+            var expirationTimeObject:NSNumber = capabilities.objectForKey("expiration") as! NSNumber;
+            var expirationTimeValue:Int64 = expirationTimeObject.longLongValue;
+            var currentTimeValue:NSTimeInterval = NSDate().timeIntervalSince1970;
+        
+            if( (expirationTimeValue-Int64(currentTimeValue)) > 0 ) {
+                isValid = true;
+            }
+        }
+    
+        return isValid;
+    }
+    
+    public func deviceDidStartListeningForIncomingConnections(device: TCDevice)->() {
+        println("Started listening for incoming connections")
+    }
+    
+    public func device(device:TCDevice, didStopListeningForIncomingConnections error:NSError)->(){
+        println("Stopped listening for incoming connections")
+    }
+    
+    public func device(device:TCDevice, didReceiveIncomingConnection connection:TCConnection)->() {
+        println("Receiving an incoming connection")
+        self.pendingConnection = connection
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(
+            "PendingIncomingConnectionReceived",
+            object: nil,
+            userInfo:nil)
+    }
+
 }
