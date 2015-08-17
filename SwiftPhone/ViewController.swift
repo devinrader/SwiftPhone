@@ -34,7 +34,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
     @IBAction func btnCall(sender: AnyObject) {
         self.phone.connectWithParams();
     }
@@ -52,6 +51,13 @@ class ViewController: UIViewController {
     }
     
     func pendingIncomingConnectionReceived(notification:NSNotification) {
+        
+        if UIApplication.sharedApplication().applicationState != UIApplicationState.Active {
+            var notification:UILocalNotification = UILocalNotification()
+            notification.alertBody = "Incoming Call"
+            UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+        }
+        
         self.btnAnswer.enabled = true
         self.btnReject.enabled = true
         self.btnIgnore.enabled = true
