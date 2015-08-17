@@ -17,12 +17,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Va-zf-Hy3">
-                                <rect key="frame" x="277" y="167" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="285" y="167" width="30" height="30"/>
+                                <state key="normal" title="Call">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="btnCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O3p-sD-0qf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-Nh-Npo">
+                                <rect key="frame" x="275" y="219" width="51" height="30"/>
+                                <state key="normal" title="Answer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ndf-eS-WxV"/>
+                                    <action selector="btnCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rl2-ca-n1w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqI-DE-tHp">
+                                <rect key="frame" x="278" y="257" width="44" height="30"/>
+                                <state key="normal" title="Reject">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMa-Fw-JmB"/>
+                                    <action selector="btnReject:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BsI-O0-dUQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10R-re-vAz">
+                                <rect key="frame" x="278" y="295" width="44" height="30"/>
+                                <state key="normal" title="Ignore">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQ0-jQ-f8c"/>
+                                    <action selector="btnIgnore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U8R-Kg-75G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -32,6 +62,11 @@
                             <constraint firstAttribute="centerX" secondItem="1Va-zf-Hy3" secondAttribute="centerX" id="rwY-y4-PWr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnAnswer" destination="amQ-Nh-Npo" id="Byr-8d-W0s"/>
+                        <outlet property="btnIgnore" destination="10R-re-vAz" id="hFg-ef-2BB"/>
+                        <outlet property="btnReject" destination="NqI-DE-tHp" id="oq9-Q8-hXz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

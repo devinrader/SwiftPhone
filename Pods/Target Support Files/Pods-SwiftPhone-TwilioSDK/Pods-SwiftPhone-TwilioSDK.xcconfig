@@ -1,0 +1,2 @@
+PODS_SWIFTPHONE_TWILIOSDK_LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/TwilioSDK/Libraries" "$(PODS_ROOT)/TwilioSDK/Libraries" "$(PODS_ROOT)/TwilioSDK/Libraries"
+PODS_SWIFTPHONE_TWILIOSDK_OTHER_LDFLAGS = -read_only_relocs suppress -l"TwilioClient" -l"crypto" -l"ssl" -framework "AVFoundation" -framework "AudioToolbox" -framework "CFNetwork" -framework "SystemConfiguration"
