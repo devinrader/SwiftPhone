@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func btnCall(sender: AnyObject) {
-        self.phone.connect();
+        self.phone.connectWithParams();
     }
 }
 
