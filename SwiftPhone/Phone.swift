@@ -88,14 +88,14 @@ public class Phone : NSObject, TCDeviceDelegate {
         var isValid:Bool = false
     
         if self.device != nil {
-            var capabilities = self.device!.capabilities as NSDictionary;
+            var capabilities = self.device!.capabilities as NSDictionary
         
             var expirationTimeObject:NSNumber = capabilities.objectForKey("expiration") as! NSNumber
-            var expirationTimeValue:Int64 = expirationTimeObject.longLongValue;
-            var currentTimeValue:NSTimeInterval = NSDate().timeIntervalSince1970;
+            var expirationTimeValue:Int64 = expirationTimeObject.longLongValue
+            var currentTimeValue:NSTimeInterval = NSDate().timeIntervalSince1970
         
             if (expirationTimeValue-Int64(currentTimeValue)) > 0 {
-                isValid = true;
+                isValid = true
             }
         }
     
