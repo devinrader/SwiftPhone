@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -22,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O3p-sD-0qf"/>
+                                    <action selector="call:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CTD-lG-YFQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-Nh-Npo">
@@ -31,8 +32,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ndf-eS-WxV"/>
-                                    <action selector="btnCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rl2-ca-n1w"/>
+                                    <action selector="answer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IEa-GX-Wgo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqI-DE-tHp">
@@ -41,8 +41,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMa-Fw-JmB"/>
-                                    <action selector="btnReject:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BsI-O0-dUQ"/>
+                                    <action selector="reject:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZb-BL-Zbu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10R-re-vAz">
@@ -51,8 +50,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQ0-jQ-f8c"/>
-                                    <action selector="btnIgnore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U8R-Kg-75G"/>
+                                    <action selector="ignore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BhJ-Wt-2Nv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,9 +61,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnAnswer" destination="amQ-Nh-Npo" id="Byr-8d-W0s"/>
-                        <outlet property="btnIgnore" destination="10R-re-vAz" id="hFg-ef-2BB"/>
-                        <outlet property="btnReject" destination="NqI-DE-tHp" id="oq9-Q8-hXz"/>
+                        <outlet property="answer" destination="amQ-Nh-Npo" id="wqO-7O-glB"/>
+                        <outlet property="ignore" destination="10R-re-vAz" id="2y1-S4-se6"/>
+                        <outlet property="reject" destination="NqI-DE-tHp" id="yRx-vW-DtI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

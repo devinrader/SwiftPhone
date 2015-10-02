@@ -17,13 +17,13 @@ public class SwiftRequest {
     
     // GET requests
     public func get(url: String, auth: [String: String] = [String: String](), params: [String: String] = [String: String](), callback: ((err: NSError?, response: NSHTTPURLResponse?, body: AnyObject?)->())? = nil) {
-        var qs = dictToQueryString(params)
+        let qs = dictToQueryString(params)
         request(["url" : url, "auth" : auth, "querystring": qs ], callback: callback )
     }
     
     // POST requests
     public func post(url: String, data: [String: String] = [String: String](), auth: [String: String] = [String: String](), callback: ((err: NSError?, response: NSHTTPURLResponse?, body: AnyObject?)->())? = nil) {
-        var qs = dictToQueryString(data)
+        let qs = dictToQueryString(data)
         request(["url": url, "method" : "POST", "body" : qs, "auth" : auth] , callback: callback)
     }
     
@@ -33,19 +33,19 @@ public class SwiftRequest {
         
         var urlString = options["url"] as! String
         if( options["querystring"] != nil && (options["querystring"] as! String) != "" ) {
-            var qs = options["querystring"] as! String
+            let qs = options["querystring"] as! String
             urlString = "\(urlString)?\(qs)"
         }
         
-        var url = NSURL(string:urlString)
-        var urlRequest = NSMutableURLRequest(URL: url!)
+        let url = NSURL(string:urlString)
+        let urlRequest = NSMutableURLRequest(URL: url!)
         
         if( options["method"] != nil) {
             urlRequest.HTTPMethod = options["method"] as! String
         }
         
         if( options["body"] != nil && options["body"] as! String != "" ) {
-            var postData = (options["body"] as! String).dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
+            let postData = (options["body"] as! String).dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
             urlRequest.HTTPBody = postData
             urlRequest.setValue("\(postData!.length)", forHTTPHeaderField: "Content-length")
         }
@@ -54,26 +54,34 @@ public class SwiftRequest {
         if( options["auth"] != nil && (options["auth"] as! [String: String]).count > 0) {
             var auth = options["auth"] as! [String: String]
             if( auth["username"] != nil && auth["password"] != nil ) {
-                var username = auth["username"]
-                var password = auth["password"]
-                var authEncoded = "\(username!):\(password!)".dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.allZeros);
-                println(authEncoded)
-                var authValue = "Basic \(authEncoded)"
+                let username = auth["username"]
+                let password = auth["password"]
+                let authEncoded = "\(username!):\(password!)".dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions());
+                print(authEncoded)
+                let authValue = "Basic \(authEncoded)"
                 urlRequest.setValue(authValue, forHTTPHeaderField: "Authorization")
             }
         }
         
         let task = session.dataTaskWithRequest(urlRequest, completionHandler: {body, response, err in
-            var resp = response as! NSHTTPURLResponse?
+            let resp = response as! NSHTTPURLResponse?
             
             if( err == nil) {
-                if(response.MIMEType == "text/html") {
-                    var bodyStr = NSString(data: body, encoding:NSUTF8StringEncoding)
+                if(response!.MIMEType == "text/html") {
+                    let bodyStr = NSString(data: body!, encoding:NSUTF8StringEncoding)
                     return callback!(err: err, response: resp, body: bodyStr)
-                } else if(response.MIMEType == "application/json") {
+                } else if(response!.MIMEType == "application/json") {
+                    var json: AnyObject?
                     var localError: NSError?
-                    var json: AnyObject! = NSJSONSerialization.JSONObjectWithData(body! as NSData, options: NSJSONReadingOptions.MutableContainers, error: &localError)
-                    return callback!(err: err, response: resp, body: json);
+
+                    do {
+                        json = try NSJSONSerialization.JSONObjectWithData(body! as NSData, options: NSJSONReadingOptions.MutableContainers)
+                    } catch let parseError as NSError {
+                        print(parseError)
+                        localError = parseError
+                    }
+                    
+                    return callback!(err: localError, response: resp, body: json);
                 }
             }
             

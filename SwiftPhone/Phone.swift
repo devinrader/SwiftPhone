@@ -19,18 +19,18 @@ public class Phone : NSObject, TCDeviceDelegate {
     
     func login() {
     
-        TwilioClient.sharedInstance().setLogLevel(TCLogLevel._LOG_VERBOSE)
+        TwilioClient.sharedInstance().setLogLevel(TCLogLevel.LOG_VERBOSE)
         
-        var url:String = self.getCapabilityTokenUrl()
+        let url:String = self.getCapabilityTokenUrl()
         
-        var swiftRequest = SwiftRequest()
+        let swiftRequest = SwiftRequest()
         swiftRequest.get(url, callback: { (err, response, body) -> () in
             if err != nil {
                 return
             }
             
-            var token = body as! String
-            println(token)
+            let token = NSString(data: body as! NSData, encoding: NSUTF8StringEncoding) as! String
+            print(token)
             
             if err == nil && token != "" {
                 if self.device == nil {
@@ -88,11 +88,11 @@ public class Phone : NSObject, TCDeviceDelegate {
         var isValid:Bool = false
     
         if self.device != nil {
-            var capabilities = self.device!.capabilities as NSDictionary
+            let capabilities = self.device!.capabilities! as NSDictionary
         
-            var expirationTimeObject:NSNumber = capabilities.objectForKey("expiration") as! NSNumber
-            var expirationTimeValue:Int64 = expirationTimeObject.longLongValue
-            var currentTimeValue:NSTimeInterval = NSDate().timeIntervalSince1970
+            let expirationTimeObject:NSNumber = capabilities.objectForKey("expiration") as! NSNumber
+            let expirationTimeValue:Int64 = expirationTimeObject.longLongValue
+            let currentTimeValue:NSTimeInterval = NSDate().timeIntervalSince1970
         
             if (expirationTimeValue-Int64(currentTimeValue)) > 0 {
                 isValid = true
@@ -103,15 +103,15 @@ public class Phone : NSObject, TCDeviceDelegate {
     }
     
     public func deviceDidStartListeningForIncomingConnections(device: TCDevice)->() {
-        println("Started listening for incoming connections")
+        print("Started listening for incoming connections")
     }
     
     public func device(device:TCDevice, didStopListeningForIncomingConnections error:NSError)->(){
-        println("Stopped listening for incoming connections")
+        print("Stopped listening for incoming connections")
     }
     
     public func device(device:TCDevice, didReceiveIncomingConnection connection:TCConnection)->() {
-        println("Receiving an incoming connection")
+        print("Receiving an incoming connection")
         self.pendingConnection = connection
         
         NSNotificationCenter.defaultCenter().postNotificationName(
