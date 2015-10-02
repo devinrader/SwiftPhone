@@ -52,6 +52,22 @@ class ViewController: UIViewController {
         self.phone.ignoreConnection()
     }
     
+    @IBAction func sendDigit(sender: AnyObject) {
+        self.phone.sendInput(String((sender as! UIButton).tag))
+    }
+    
+    @IBAction func setSpeaker(sender: AnyObject) throws {
+        do {
+            try self.phone.setSpeaker( (sender as! UISwitch).on )
+        } catch let err {
+            print(err)
+        }
+    }
+
+    @IBAction func toggleMute(sender: AnyObject) {
+        self.phone.muteConnection( (sender as! UISwitch).on )
+    }
+    
     func pendingIncomingConnectionReceived(notification:NSNotification) {
         
         if UIApplication.sharedApplication().applicationState != UIApplicationState.Active {

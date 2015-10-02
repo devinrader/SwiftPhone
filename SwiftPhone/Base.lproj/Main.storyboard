@@ -53,6 +53,46 @@
                                     <action selector="ignore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BhJ-Wt-2Nv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUp-8X-wzV">
+                                <rect key="frame" x="138" y="358" width="30" height="30"/>
+                                <state key="normal" title="1"/>
+                                <connections>
+                                    <action selector="sendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Mc-ep-vr7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6M0-tv-kFB">
+                                <rect key="frame" x="238" y="358" width="30" height="30"/>
+                                <state key="normal" title="2"/>
+                                <connections>
+                                    <action selector="sendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eGS-h4-XSW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGY-Fs-e4m">
+                                <rect key="frame" x="355" y="358" width="30" height="30"/>
+                                <state key="normal" title="3"/>
+                                <connections>
+                                    <action selector="sendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYd-bx-NKm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRa-Ka-qdo">
+                                <rect key="frame" x="461" y="358" width="30" height="30"/>
+                                <state key="normal" title="4"/>
+                                <connections>
+                                    <action selector="sendDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYe-ye-kUm"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGt-xH-mV5">
+                                <rect key="frame" x="276" y="427" width="51" height="31"/>
+                                <connections>
+                                    <action selector="setSpeaker:" destination="BYZ-38-t0r" eventType="valueChanged" id="ycc-U3-sas"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KKb-U4-wq8">
+                                <rect key="frame" x="276" y="498" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleMute:" destination="BYZ-38-t0r" eventType="valueChanged" id="hkP-fF-3Wg"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 let SPDefaultClientName:String = "jenny"
 let SPBaseCapabilityTokenUrl:String = "http://example.com/generateToken?%@"
@@ -82,6 +83,29 @@ public class Phone : NSObject, TCDeviceDelegate {
     func ignoreConnection() {
         self.pendingConnection?.ignore()
         self.pendingConnection = nil
+    }
+    
+    func sendInput(input:String) {
+        if self.connection != nil {
+            self.connection!.sendDigits(input)
+        }
+    }
+    
+    func setSpeaker(enabled:Bool) throws {
+        if self.connection != nil {
+            if (enabled)
+            {
+                try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker);
+            } else {
+                try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.None);
+            }
+        }
+    }
+    
+    func muteConnection(mute:Bool) {
+        if self.connection != nil {
+            self.connection!.muted = mute;
+        }
     }
 
     func capabilityTokenValid()->(Bool) {
